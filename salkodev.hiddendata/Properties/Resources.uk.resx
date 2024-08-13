@@ -118,31 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddFilesCaption" xml:space="preserve">
-    <value>Add files</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lock-secure" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock-secure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Додати файли</value>
   </data>
   <data name="OpenFileCaption" xml:space="preserve">
-    <value>Open file</value>
+    <value>Відкрити файл</value>
   </data>
   <data name="OpenImageFileDescr" xml:space="preserve">
-    <value>Open any file (where you want to save hidden data)</value>
+    <value>Відкрийте будь-який файл зображення (в якому потрібно зберігати приховані дані)</value>
   </data>
   <data name="OpenSourceImageFileCaption" xml:space="preserve">
-    <value>Open source file</value>
+    <value>Відкрити робочий файл зображення</value>
   </data>
   <data name="OpenWorkImageFileFirst" xml:space="preserve">
-    <value>Open work file first</value>
+    <value>Вам необхідно спочатку відкрити робочий файл зображення</value>
   </data>
   <data name="SelectFileCaption" xml:space="preserve">
-    <value>Select file</value>
+    <value>Оберіть файл</value>
   </data>
   <data name="SelectOnlyOneFileToOpen" xml:space="preserve">
-    <value>Select only one file to open it for viewing</value>
+    <value>Оберіть лише один файл для перегляду</value>
   </data>
   <data name="YouNeedToAddAtLeastFile" xml:space="preserve">
-    <value>You need to add at least file</value>
+    <value>Вам необхідно додати хоча б один файл</value>
   </data>
 </root>

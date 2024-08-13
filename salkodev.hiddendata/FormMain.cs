@@ -1,3 +1,4 @@
+using System.Text;
 using salkodev.hiddendata.Data;
 
 namespace salkodev.hiddendata
@@ -74,13 +75,13 @@ namespace salkodev.hiddendata
 			{
 				if (_Manager.State == DataState.Unspecified)
 				{
-					MessageBox.Show(this, "Open any file (where you want to save hidden data)", "Open file", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					MessageBox.Show(this, Properties.Resources.OpenImageFileDescr, Properties.Resources.OpenFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 					return;
 				}
 
 				if (_Manager.FileName == null)
 				{
-					MessageBox.Show(this, "Open work file first", "Select file", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					MessageBox.Show(this, Properties.Resources.OpenWorkImageFileFirst, Properties.Resources.SelectFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 					return;
 				}
 
@@ -92,15 +93,15 @@ namespace salkodev.hiddendata
 
 				if (files == null || files.Length == 0)
 				{
-					MessageBox.Show(this, "You need to add at least file", "Add files", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					MessageBox.Show(this, Properties.Resources.YouNeedToAddAtLeastFile, Properties.Resources.AddFilesCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 					return;
 				}
 
 				byte[] data = _Manager.Data.Serialize();
 
 				//...test save to xml
-				string destFile = Path.Combine(Application.StartupPath, "result.xml");
-				File.WriteAllBytes(destFile, data);
+				//string destFile = Path.Combine(Application.StartupPath, "result.xml");
+				//File.WriteAllBytes(destFile, data);
 
 				var saver = new DataSaver();
 				saver.Save(_Manager.FileName, _Manager.FileNameBody, Data.Marker.META_DATA_BEGIN_MARKER, _Manager.Data);
@@ -142,7 +143,7 @@ namespace salkodev.hiddendata
 		{
 			if (_Manager.State == DataState.Unspecified)
 			{
-				MessageBox.Show(this, "Open image file first", "Open source file", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				MessageBox.Show(this, Properties.Resources.OpenWorkImageFileFirst, Properties.Resources.OpenSourceImageFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 				return;
 			}
 
@@ -176,7 +177,7 @@ namespace salkodev.hiddendata
 		{
 			if (_Manager.State == DataState.Unspecified)
 			{
-				MessageBox.Show(this, "Open image file first", "Open source file", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				MessageBox.Show(this, Properties.Resources.OpenWorkImageFileFirst, Properties.Resources.OpenSourceImageFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 				return;
 			}
 
@@ -249,5 +250,44 @@ namespace salkodev.hiddendata
 
 		}//_MenuItemSaveAs_Click
 
+		void _MenuItemOpen_Click(object sender, EventArgs e)
+		{
+			if (_ListViewFilesInside.SelectedItems.Count == 0)
+				return;
+
+			if (_ListViewFilesInside.SelectedItems.Count > 1)
+			{
+				MessageBox.Show(this, Properties.Resources.SelectOnlyOneFileToOpen, Properties.Resources.SelectFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
+
+			try
+			{
+				var li = _ListViewFilesInside.SelectedItems[0];
+				var metaFile = (MetadataFile)li.Tag;
+				byte[] body = metaFile.Body;
+
+				//decode (we support UTF-8 for now)
+				string textInitial = Encoding.UTF8.GetString(body, 0, body.Length);
+
+				var viewForm = new TextViewForm();
+				viewForm.FileContent = textInitial;
+
+				if (viewForm.ShowDialog(this) != DialogResult.OK)
+					return;
+
+				//need to save content back... if changed
+				string textChanged = viewForm.FileContent;
+				if (textChanged == textInitial)
+					return; //no changes
+
+				//TODO@: update metadata, and mark as "modified"
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(this, ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 	}
 }

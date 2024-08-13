@@ -61,12 +61,84 @@ namespace salkodev.hiddendata.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add files.
+        /// </summary>
+        internal static string AddFilesCaption {
+            get {
+                return ResourceManager.GetString("AddFilesCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap lock_secure {
             get {
                 object obj = ResourceManager.GetObject("lock-secure", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open file.
+        /// </summary>
+        internal static string OpenFileCaption {
+            get {
+                return ResourceManager.GetString("OpenFileCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open any file (where you want to save hidden data).
+        /// </summary>
+        internal static string OpenImageFileDescr {
+            get {
+                return ResourceManager.GetString("OpenImageFileDescr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open source file.
+        /// </summary>
+        internal static string OpenSourceImageFileCaption {
+            get {
+                return ResourceManager.GetString("OpenSourceImageFileCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open work file first.
+        /// </summary>
+        internal static string OpenWorkImageFileFirst {
+            get {
+                return ResourceManager.GetString("OpenWorkImageFileFirst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select file.
+        /// </summary>
+        internal static string SelectFileCaption {
+            get {
+                return ResourceManager.GetString("SelectFileCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select only one file to open it for viewing.
+        /// </summary>
+        internal static string SelectOnlyOneFileToOpen {
+            get {
+                return ResourceManager.GetString("SelectOnlyOneFileToOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You need to add at least file.
+        /// </summary>
+        internal static string YouNeedToAddAtLeastFile {
+            get {
+                return ResourceManager.GetString("YouNeedToAddAtLeastFile", resourceCulture);
             }
         }
     }

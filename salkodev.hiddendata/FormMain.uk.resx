@@ -118,152 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="_PictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 34</value>
-  </data>
-  <data name="_PictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 62</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="_PictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="_PictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;_PictureBox.Name" xml:space="preserve">
-    <value>_PictureBox</value>
-  </data>
-  <data name="&gt;&gt;_PictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_PictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_PictureBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="_LabelMain.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="_LabelMain.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
-  </data>
-  <data name="_LabelMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 36</value>
-  </data>
   <data name="_LabelMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 25</value>
-  </data>
-  <data name="_LabelMain.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>214, 25</value>
   </data>
   <data name="_LabelMain.Text" xml:space="preserve">
-    <value>Hide information in a file</value>
-  </data>
-  <data name="&gt;&gt;_LabelMain.Name" xml:space="preserve">
-    <value>_LabelMain</value>
-  </data>
-  <data name="&gt;&gt;_LabelMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_LabelMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_LabelMain.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="_LabelDescr.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="_LabelDescr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 72</value>
-  </data>
-  <data name="_LabelDescr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>571, 52</value>
-  </data>
-  <data name="_LabelDescr.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>Приховані дані в файлі</value>
   </data>
   <data name="_LabelDescr.Text" xml:space="preserve">
-    <value>The utility allows you to write additional information to a file (for example, .jpg) at the end of the file.</value>
+    <value>Утіліта дозволяє зберегти приховані дані всередині зображення (.jpg).</value>
   </data>
-  <data name="&gt;&gt;_LabelDescr.Name" xml:space="preserve">
-    <value>_LabelDescr</value>
-  </data>
-  <data name="&gt;&gt;_LabelDescr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_LabelDescr.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_LabelDescr.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <metadata name="_OpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="_OpenFileDialog.Filter" xml:space="preserve">
-    <value>All files (*.*)|*.*|Jpg files(*.jpg)|*.jpg</value>
-  </data>
-  <data name="_LabelOpenedFile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="_LabelOpenedFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 128</value>
+    <value>Всі файли (*.*)|*.*|Jpg файли (*.jpg)|*.jpg</value>
   </data>
   <data name="_LabelOpenedFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 15</value>
-  </data>
-  <data name="_LabelOpenedFile.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>91, 15</value>
   </data>
   <data name="_LabelOpenedFile.Text" xml:space="preserve">
-    <value>Opened file:</value>
-  </data>
-  <data name="&gt;&gt;_LabelOpenedFile.Name" xml:space="preserve">
-    <value>_LabelOpenedFile</value>
-  </data>
-  <data name="&gt;&gt;_LabelOpenedFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_LabelOpenedFile.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_LabelOpenedFile.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="_LabelOpenedFileName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>Робочий файл:</value>
   </data>
   <data name="_LabelOpenedFileName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 128</value>
+    <value>177, 128</value>
   </data>
   <data name="_LabelOpenedFileName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>475, 15</value>
+    <value>468, 15</value>
   </data>
-  <data name="_LabelOpenedFileName.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="_LabelOpenedFileName.Text" xml:space="preserve">
-    <value>(...)</value>
-  </data>
-  <data name="&gt;&gt;_LabelOpenedFileName.Name" xml:space="preserve">
-    <value>_LabelOpenedFileName</value>
-  </data>
-  <data name="&gt;&gt;_LabelOpenedFileName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_LabelOpenedFileName.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_LabelOpenedFileName.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="_ToolStripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>157, 17</value>
-  </metadata>
   <data name="_ToolStripButtonOpen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -280,17 +158,11 @@
         uwkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="_ToolStripButtonOpen.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="_ToolStripButtonOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
   <data name="_ToolStripButtonOpen.Text" xml:space="preserve">
-    <value>Open</value>
+    <value>Відкрити</value>
   </data>
   <data name="_ToolStripButtonOpen.ToolTipText" xml:space="preserve">
-    <value>Open file</value>
+    <value>Відкрити файл</value>
   </data>
   <data name="_ToolStripButtonSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -321,111 +193,30 @@
         eGM4n1EvRS5ZEGe3R22MioyMj7LbE6dU4klvZjDLjP2vh1J/A+grpATMi8WfAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="_ToolStripButtonSave.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="_ToolStripButtonSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
   <data name="_ToolStripButtonSave.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>Зберегти</value>
   </data>
   <data name="_ToolStripButtonSave.ToolTipText" xml:space="preserve">
-    <value>Save changes</value>
+    <value>Зберегти зміни</value>
   </data>
-  <data name="_ToolStripMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="_ToolStripMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>657, 25</value>
-  </data>
-  <data name="_ToolStripMain.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="_ToolStripMain.Text" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="&gt;&gt;_ToolStripMain.Name" xml:space="preserve">
-    <value>_ToolStripMain</value>
-  </data>
-  <data name="&gt;&gt;_ToolStripMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_ToolStripMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_ToolStripMain.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="_OpenFileDialogForData.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>289, 17</value>
-  </metadata>
   <data name="_OpenFileDialogForData.Filter" xml:space="preserve">
-    <value>All files(*.*)|*.*|Zip archives (*.zip)|*.zip</value>
+    <value>Всі файли (*.*)|*.*|Zip архіви (*.zip)|*.zip</value>
   </data>
   <data name="_OpenFileDialogForData.Title" xml:space="preserve">
-    <value>Select file which you need to hide inside</value>
-  </data>
-  <data name="_ListViewFilesInside.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+    <value>Оберіть файли які потрібно зберегти як приховані дані</value>
   </data>
   <data name="_ColumnHeaderFileName.Text" xml:space="preserve">
-    <value>File name</value>
-  </data>
-  <data name="_ColumnHeaderFileName.Width" type="System.Int32, mscorlib">
-    <value>570</value>
-  </data>
-  <metadata name="_ContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>470, 17</value>
-  </metadata>
-  <data name="_MenuItemAddFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 22</value>
-  </data>
-  <data name="_MenuItemAddFiles.Text" xml:space="preserve">
-    <value>Add files...</value>
-  </data>
-  <data name="_MenuItemOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 22</value>
-  </data>
-  <data name="_MenuItemOpen.Text" xml:space="preserve">
-    <value>Open ...</value>
-  </data>
-  <data name="_MenuItemSaveAs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 22</value>
-  </data>
-  <data name="_MenuItemSaveAs.Text" xml:space="preserve">
-    <value>Save as...</value>
-  </data>
-  <data name="_MenuItemSaveAllFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 22</value>
-  </data>
-  <data name="_MenuItemSaveAllFiles.Text" xml:space="preserve">
-    <value>Save all files to folder...</value>
+    <value>Ім'я файлу</value>
   </data>
   <data name="_ContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 114</value>
+    <value>246, 70</value>
   </data>
-  <data name="&gt;&gt;_ContextMenuStrip.Name" xml:space="preserve">
-    <value>_ContextMenuStrip</value>
-  </data>
-  <data name="&gt;&gt;_ContextMenuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="_ListViewFilesInside.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 175</value>
-  </data>
-  <data name="_ListViewFilesInside.Size" type="System.Drawing.Size, System.Drawing">
-    <value>633, 178</value>
-  </data>
-  <metadata name="_lmageListFileIcons.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>626, 17</value>
-  </metadata>
   <data name="_lmageListFileIcons.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAANAMAAAJNU0Z0AUkBTAMBAQAB
-        NAEAATQBAAEQAQABEAEABP8BIQEACP8BQgFNATYHAAE2AwABKAMAAUADAAEQAwABAQEAASAGAAEQGgAD
+        MAEAATABAAEQAQABEAEABP8BIQEACP8BQgFNATYHAAE2AwABKAMAAUADAAEQAwABAQEAASAGAAEQGgAD
         IwEyA1gBtwMdAfgDPgHsA04BlgMMARDkAAMtAUQDHQH4AwAB/wNYAb8DVgHSAwAB/wNXAcEDBgEI3AAD
         CQELA04B3QMYAfoDLwFJCAADTQGTAwAB/wNQAZ3cAAMmATkDAAH/A0kBhgMbASYDUgHZAy4BRwQAA1cB
         uQMAAf8DQAFx2AADJwE6AwAB/wNHAYMDFQEdAxIB+wMyAfEDGQEiAwsBDgNOAd0DAAH/Ay4BSNQAAwoB
@@ -441,101 +232,41 @@
         WAYAAfwBeAYAAf4BMAYAAf4BAQYAAf8BAwYACw==
 </value>
   </data>
-  <data name="_ListViewFilesInside.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="_MenuItemAddFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
   </data>
-  <data name="&gt;&gt;_ListViewFilesInside.Name" xml:space="preserve">
-    <value>_ListViewFilesInside</value>
+  <data name="_MenuItemAddFiles.Text" xml:space="preserve">
+    <value>Додати файли ...</value>
   </data>
-  <data name="&gt;&gt;_ListViewFilesInside.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="_MenuItemSaveAs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
   </data>
-  <data name="&gt;&gt;_ListViewFilesInside.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="_MenuItemSaveAs.Text" xml:space="preserve">
+    <value>Зберегти як ...</value>
   </data>
-  <data name="&gt;&gt;_ListViewFilesInside.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="_MenuItemSaveAllFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
   </data>
-  <data name="_LabelNoFilesInsideFound.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="_LabelNoFilesInsideFound.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="_MenuItemSaveAllFiles.Text" xml:space="preserve">
+    <value>Зберегти всі файли до папки ...</value>
   </data>
   <data name="_LabelNoFilesInsideFound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 249</value>
+    <value>191, 249</value>
   </data>
   <data name="_LabelNoFilesInsideFound.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 15</value>
-  </data>
-  <data name="_LabelNoFilesInsideFound.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>306, 15</value>
   </data>
   <data name="_LabelNoFilesInsideFound.Text" xml:space="preserve">
-    <value>No files found inside opened image</value>
-  </data>
-  <data name="_LabelNoFilesInsideFound.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;_LabelNoFilesInsideFound.Name" xml:space="preserve">
-    <value>_LabelNoFilesInsideFound</value>
-  </data>
-  <data name="&gt;&gt;_LabelNoFilesInsideFound.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_LabelNoFilesInsideFound.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_LabelNoFilesInsideFound.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="_LinkLabelOpenImageFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="_LinkLabelOpenImageFile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>Не знайдено файлів всередині відкритого зображення</value>
   </data>
   <data name="_LinkLabelOpenImageFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 222</value>
+    <value>181, 222</value>
   </data>
   <data name="_LinkLabelOpenImageFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 15</value>
-  </data>
-  <data name="_LinkLabelOpenImageFile.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>327, 15</value>
   </data>
   <data name="_LinkLabelOpenImageFile.Text" xml:space="preserve">
-    <value>Click here to open image file</value>
-  </data>
-  <data name="_LinkLabelOpenImageFile.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;_LinkLabelOpenImageFile.Name" xml:space="preserve">
-    <value>_LinkLabelOpenImageFile</value>
-  </data>
-  <data name="&gt;&gt;_LinkLabelOpenImageFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_LinkLabelOpenImageFile.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_LinkLabelOpenImageFile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="_SaveFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>782, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>157</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>657, 398</value>
+    <value>Натисніть сюди щоб відкрити робочий файл-зображення</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -674,78 +405,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Hide data in file</value>
-  </data>
-  <data name="&gt;&gt;_OpenFileDialog.Name" xml:space="preserve">
-    <value>_OpenFileDialog</value>
-  </data>
-  <data name="&gt;&gt;_OpenFileDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_ToolStripButtonOpen.Name" xml:space="preserve">
-    <value>_ToolStripButtonOpen</value>
-  </data>
-  <data name="&gt;&gt;_ToolStripButtonOpen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_ToolStripButtonSave.Name" xml:space="preserve">
-    <value>_ToolStripButtonSave</value>
-  </data>
-  <data name="&gt;&gt;_ToolStripButtonSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_OpenFileDialogForData.Name" xml:space="preserve">
-    <value>_OpenFileDialogForData</value>
-  </data>
-  <data name="&gt;&gt;_OpenFileDialogForData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_ColumnHeaderFileName.Name" xml:space="preserve">
-    <value>_ColumnHeaderFileName</value>
-  </data>
-  <data name="&gt;&gt;_ColumnHeaderFileName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_MenuItemAddFiles.Name" xml:space="preserve">
-    <value>_MenuItemAddFiles</value>
-  </data>
-  <data name="&gt;&gt;_MenuItemAddFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_MenuItemSaveAs.Name" xml:space="preserve">
-    <value>_MenuItemSaveAs</value>
-  </data>
-  <data name="&gt;&gt;_MenuItemSaveAs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_MenuItemSaveAllFiles.Name" xml:space="preserve">
-    <value>_MenuItemSaveAllFiles</value>
-  </data>
-  <data name="&gt;&gt;_MenuItemSaveAllFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_lmageListFileIcons.Name" xml:space="preserve">
-    <value>_lmageListFileIcons</value>
-  </data>
-  <data name="&gt;&gt;_lmageListFileIcons.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_SaveFileDialog.Name" xml:space="preserve">
-    <value>_SaveFileDialog</value>
-  </data>
-  <data name="&gt;&gt;_SaveFileDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_MenuItemOpen.Name" xml:space="preserve">
-    <value>_MenuItemOpen</value>
-  </data>
-  <data name="&gt;&gt;_MenuItemOpen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormMain</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Зберігання прихованої інформації в файлі</value>
   </data>
 </root>
