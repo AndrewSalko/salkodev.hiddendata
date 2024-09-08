@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema 
+    Microsoft ResX Schema
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -119,50 +119,41 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="_LabelMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 25</value>
+    <value>207, 25</value>
   </data>
   <data name="_LabelMain.Text" xml:space="preserve">
-    <value>Приховані дані в файлі</value>
+    <value>Hide information in file</value>
   </data>
   <data name="_LabelDescr.Text" xml:space="preserve">
-    <value>Утіліта дозволяє зберегти приховані дані всередині зображення (.jpg).</value>
+    <value>The utility allows you to save files inside an image (.jpg) at the end of the file.</value>
   </data>
   <data name="_OpenFileDialog.Filter" xml:space="preserve">
-    <value>Всі файли (*.*)|*.*|Jpg файли (*.jpg)|*.jpg</value>
+    <value>All files (*.*)|*.*|Jpg files(*.jpg)|*.jpg</value>
   </data>
   <data name="_LabelOpenedFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 15</value>
+    <value>71, 15</value>
   </data>
   <data name="_LabelOpenedFile.Text" xml:space="preserve">
-    <value>Робочий файл:</value>
-  </data>
-  <data name="_LabelOpenedFileName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 128</value>
-  </data>
-  <data name="_LabelOpenedFileName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>468, 15</value>
+    <value>Opened file:</value>
   </data>
   <data name="_ToolStripButtonOpen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI3SURBVFhH7ZVBTxNBFMf3ol4MuF1WCTFqIrGxgtvBxE9A
-        +Ax+Bw9+BE9evHExIUDoSj2QqJHLQkKMoTvIhSMnbmrcLkOllQRakM44M/tKrTuFgDPqgX/yv2zm5fef
-        N2/zrHP9F2IT1oVout89zp8nezJwXK8EPPad4Kvv1OIZZyv2MyRl/r3sO9W4kHkCZfokbifhvsNOsjgX
-        Fa/chFI9EgGSm6uhKRecKSjVIxlAtloBU3j9uXPIz49uT9i9rfk4yeKZAZeWOHCaANKTPXvxlL15NCPd
-        zDsLzxt0DXGmAKe0nB3OAWSn/kYA0YmzBShkdJl8emHZgOxU1wAv+xgpXtPkvsr3hWyWhcM2LeVdYbb2
-        IJkJZQAO31+6x/hB1lz2/tjRB6/ZKN2vNDAiDTy0xcJcrRnmF9l67mIqQLlgs+rrG4ytjDCGkTH/wGiD
-        BoOXlAHqi3eNB6A4/zT9BHxgyKt+2XpVkS5XsVeneDibClCesdnO/G3jt29iFEi40O9PcPB+yHz7V9Aj
-        wLcDlHn7v81dVxbo9EGIvvBfsBfwvwTg7d8NsubbH6JxQCdqBdicvSr/WVWRLsdvEKUfvYeATiQC8NuT
-        2ttbxm9/iL1VwLYVTV92+fuT/aWc+eELRx4Dtq1o3HIrswOEhmb//TpG2xSjAcC2tfHMcnff3SHGh6+E
-        ioDs1M7coLu3nKupinSaYm8MkJ0SG0luJr6hkm2l07D5sLdwtH5VEiFae9qEj4Wf69/Ksn4CjNsTQvMP
-        uwkAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVFhH7ZVBTxNBFMf3olwMuF1WCTFqIrGxgtvBxE9g
+        /Ax+Bw9+BA/GD8DFhAChK9WEhBC9LCSEELqDXjxy4kLQ2C5DpZUEWpDOODP7Sq07hQAz6oF/8r9s5uX3
+        nzdv86wL/Rdio9al4kSfe5y/jHWn4LheCXjkO8E336lGk85W5KdIwvx7yXcqUS71HMr0SdxOwn2HnWRx
+        rpi/egtK9UgEiG+uhiacc8ahVI9kANlqBUzh1ZfOIT//eHvU7mnOx0kWzwy4pMSB0wSQHuvei8btzaMZ
+        6WTeWXjeoGOIMwU4peXscA4g2/U3AohOnC1ALqXLZOO1ZQOyXR0DvOllJH9dk3vLP+bSaRYO2bSQdYXZ
+        54fxTCgDcPj+wn3GD7LGsndury95jXrhQbmOEanjwS0WZqqNMDvPVjOXEwFKOZtVZm4ytjLMGEbG/BOj
+        NRoMdCkD1ObvGQ9AcfZF8gn4wJC3fbL1qiJdrmCvRvFQOhGgNGmznQ93jN++gVEg4UJ/PsHB4qD59q+g
+        p4BvBSjx9n+fvqEs0OmDEH3lv2AP4H8LwNu/G6TNtz9EI4CO1QywOXVN/rOqIl3eeIco/eg9AnQsEYDf
+        nlRnbxu//SH2PgG2peLEFZe/P9lfyJgfvnD4GWBbKo5Ybnmqn9DQ7L9fw2ibYtQP2JbWXlnu7vu7xPjw
+        FVAekO3amR5w95YzVVWRTlPsPQFku8RGkpuJb6h4W+k0bD7szR2tX5VEiOaeNuFj4Rf6t7KsX64cEyZ0
+        A1MtAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="_ToolStripButtonOpen.Text" xml:space="preserve">
-    <value>Відкрити</value>
-  </data>
   <data name="_ToolStripButtonOpen.ToolTipText" xml:space="preserve">
-    <value>Відкрити файл</value>
+    <value>Open file</value>
   </data>
   <data name="_ToolStripButtonSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -193,80 +184,68 @@
         eGM4n1EvRS5ZEGe3R22MioyMj7LbE6dU4klvZjDLjP2vh1J/A+grpATMi8WfAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="_ToolStripButtonSave.Text" xml:space="preserve">
-    <value>Зберегти</value>
-  </data>
   <data name="_ToolStripButtonSave.ToolTipText" xml:space="preserve">
-    <value>Зберегти зміни</value>
-  </data>
-  <data name="_OpenFileDialogForData.Filter" xml:space="preserve">
-    <value>Всі файли (*.*)|*.*|Zip архіви (*.zip)|*.zip</value>
-  </data>
-  <data name="_OpenFileDialogForData.Title" xml:space="preserve">
-    <value>Оберіть файли які потрібно зберегти як приховані дані</value>
+    <value>Save changes</value>
   </data>
   <data name="_ColumnHeaderFileName.Text" xml:space="preserve">
-    <value>Ім'я файлу</value>
+    <value>File name</value>
   </data>
   <data name="_ContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 70</value>
+    <value>133, 70</value>
   </data>
   <data name="_lmageListFileIcons.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAANAMAAAJNU0Z0AUkBTAMBAQAB
-        MAEAATABAAEQAQABEAEABP8BIQEACP8BQgFNATYHAAE2AwABKAMAAUADAAEQAwABAQEAASAGAAEQGgAD
-        IwEyA1gBtwMdAfgDPgHsA04BlgMMARDkAAMtAUQDHQH4AwAB/wNYAb8DVgHSAwAB/wNXAcEDBgEI3AAD
-        CQELA04B3QMYAfoDLwFJCAADTQGTAwAB/wNQAZ3cAAMmATkDAAH/A0kBhgMbASYDUgHZAy4BRwQAA1cB
-        uQMAAf8DQAFx2AADJwE6AwAB/wNHAYMDFQEdAxIB+wMyAfEDGQEiAwsBDgNOAd0DAAH/Ay4BSNQAAwoB
-        DQNMAeADKAH0AxkBIwMxAU4DAAH/A1YB0gMEAQUDIQEvAxoB+QM4Ae4DGwEl1AADMwFQAwAB/wNWAdQD
-        BQEGA0QBewMAAf8DVAGrBAADNgFXAwAB/wNWAc4DCwEO1AADRQF8AwAB/wNUAa0EAANTAakDAAH/A0YB
-        fwQAA0YBgAMAAf8DSgGJ2AADUwGnAwAB/wNGAYADBAEFA1UB0QMAAf8DMwFSAxIBFwMYAfoDVwG+2AAD
-        CQEMA1YBzgMAAf8DMwFSAxUBHQMxAfADBgH+A04B4QMAAf8DRAF6A0YBfwMuAUfUAAMbASUDOAHuAxoB
-        +QMeASoDJAE0A1YBzANJAeIDRAF7Aw8BFAMxAfADSQHiAwoBDdQAAy4BSAMAAf8DTgHdAwwBDwQAAwYB
+        bAEAAWwBAAEQAQABEAEABP8BIQEACP8BQgFNATYHAAE2AwABKAMAAUADAAEQAwABAQEAASAGAAEQGgAD
+        IwEyA1gBtwM1AfgDVwHsA04BlgMMARDkAAMtAUQDNQH4AwAB/wNaAb8DXgHSAwAB/wNZAcEDBgEI3AAD
+        CQELA14B3QMhAfoDLwFJCAADTQGTAwAB/wNQAZ3cAAMmATkDAAH/A0kBhgMbASYDXAHZAy4BRwQAA1cB
+        uQMAAf8DQAFx2AADJwE6AwAB/wNHAYMDFQEdAyEB+wNOAfEDGQEiAwsBDgNeAd0DAAH/Ay4BSNQAAwoB
+        DQNfAeADQQH0AxkBIwMxAU4DAAH/A14B0gMEAQUDIQEvAygB+QNTAe4DGwEl1AADMwFQAwAB/wNdAdQD
+        BQEGA0QBewMAAf8DVAGrBAADNgFXAwAB/wNdAc4DCwEO1AADRQF8AwAB/wNVAa0EAANTAakDAAH/A0YB
+        fwQAA0YBgAMAAf8DSgGJ2AADUwGnAwAB/wNGAYADBAEFA10B0QMAAf8DMwFSAxIBFwMhAfoDWQG+2AAD
+        CQEMA10BzgMAAf8DMwFSAxUBHQNMAfADDQH+A18B4QMAAf8DRAF6A0YBfwMuAUfUAAMbASUDUwHuAygB
+        +QMeASoDJAE0A10BzANeAeIDRAF7Aw8BFANMAfADXgHiAwoBDdQAAy4BSAMAAf8DXgHdAwwBDwQAAwYB
         BwgAA0oBigMAAf8DKAE72AADQAFxAwAB/wNXAbkQAANLAYwDAAH/AyYBOdwAA1ABnAMAAf8DTQGTCAAD
-        MAFLAxoB+QNOAd0DCQEL3AADBgEHA1cBwQMAAf8DVgHSA1cBwQMAAf8DHQH4Ay0BReQAAwwBEANOAZUD
-        PgHsAx0B+ANYAbcDIwEyyAABQgFNAT4HAAE+AwABKAMAAUADAAEQAwABAQEAAQEFAAGAFwAD/wEAAcAB
+        MAFLAygB+QNeAd0DCQEL3AADBgEHA1kBwQMAAf8DXgHSA1kBwQMAAf8DNQH4Ay0BReQAAwwBEANOAZUD
+        VwHsAzUB+ANYAbcDIwEyyAABQgFNAT4HAAE+AwABKAMAAUADAAEQAwABAQEAAQEFAAGAFwAD/wEAAcAB
         /wYAAYABfwYAAQwBfwYAAQIBPwcAAR8HAAEPBgABgAGHBgABxAFHBgAB4AEHBgAB4AEBBgAB8AcAAfgB
         WAYAAfwBeAYAAf4BMAYAAf4BAQYAAf8BAwYACw==
 </value>
   </data>
   <data name="_MenuItemAddFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
+    <value>132, 22</value>
   </data>
   <data name="_MenuItemAddFiles.Text" xml:space="preserve">
-    <value>Додати файли ...</value>
+    <value>Add files ...</value>
+  </data>
+  <data name="_MenuItemOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 22</value>
+  </data>
+  <data name="_MenuItemOpen.Text" xml:space="preserve">
+    <value>Open ...</value>
   </data>
   <data name="_MenuItemSaveAs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
+    <value>132, 22</value>
   </data>
   <data name="_MenuItemSaveAs.Text" xml:space="preserve">
-    <value>Зберегти як ...</value>
-  </data>
-  <data name="_MenuItemSaveAllFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="_MenuItemSaveAllFiles.Text" xml:space="preserve">
-    <value>Зберегти всі файли до папки ...</value>
-  </data>
-  <data name="_LabelNoFilesInsideFound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 249</value>
+    <value>Save as ...</value>
   </data>
   <data name="_LabelNoFilesInsideFound.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 15</value>
+    <value>171, 15</value>
   </data>
   <data name="_LabelNoFilesInsideFound.Text" xml:space="preserve">
-    <value>Не знайдено файлів всередині відкритого зображення</value>
+    <value>No files found inside image file</value>
   </data>
   <data name="_LinkLabelOpenImageFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>181, 222</value>
+    <value>216, 222</value>
   </data>
   <data name="_LinkLabelOpenImageFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>327, 15</value>
+    <value>187, 15</value>
   </data>
   <data name="_LinkLabelOpenImageFile.Text" xml:space="preserve">
-    <value>Натисніть сюди щоб відкрити робочий файл-зображення</value>
+    <value>Click here to open work image file</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -405,6 +384,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Зберігання прихованої інформації в файлі</value>
+    <value>Hide information in file</value>
   </data>
 </root>

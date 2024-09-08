@@ -44,13 +44,12 @@ namespace salkodev.hiddendata
 			_ColumnHeaderFileName = new ColumnHeader();
 			_ContextMenuStrip = new ContextMenuStrip(components);
 			_MenuItemAddFiles = new ToolStripMenuItem();
+			_MenuItemOpen = new ToolStripMenuItem();
 			_MenuItemSaveAs = new ToolStripMenuItem();
-			_MenuItemSaveAllFiles = new ToolStripMenuItem();
 			_lmageListFileIcons = new ImageList(components);
 			_LabelNoFilesInsideFound = new Label();
 			_LinkLabelOpenImageFile = new LinkLabel();
 			_SaveFileDialog = new SaveFileDialog();
-			_MenuItemOpen = new ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)_PictureBox).BeginInit();
 			_ToolStripMain.SuspendLayout();
 			_ContextMenuStrip.SuspendLayout();
@@ -58,8 +57,8 @@ namespace salkodev.hiddendata
 			// 
 			// _PictureBox
 			// 
-			_PictureBox.Image = Properties.Resources.lock_secure;
 			resources.ApplyResources(_PictureBox, "_PictureBox");
+			_PictureBox.Image = Properties.Resources.lock_secure;
 			_PictureBox.Name = "_PictureBox";
 			_PictureBox.TabStop = false;
 			// 
@@ -90,21 +89,21 @@ namespace salkodev.hiddendata
 			// 
 			// _ToolStripMain
 			// 
-			_ToolStripMain.Items.AddRange(new ToolStripItem[] { _ToolStripButtonOpen, _ToolStripButtonSave });
 			resources.ApplyResources(_ToolStripMain, "_ToolStripMain");
+			_ToolStripMain.Items.AddRange(new ToolStripItem[] { _ToolStripButtonOpen, _ToolStripButtonSave });
 			_ToolStripMain.Name = "_ToolStripMain";
 			// 
 			// _ToolStripButtonOpen
 			// 
-			_ToolStripButtonOpen.DisplayStyle = ToolStripItemDisplayStyle.Image;
 			resources.ApplyResources(_ToolStripButtonOpen, "_ToolStripButtonOpen");
+			_ToolStripButtonOpen.DisplayStyle = ToolStripItemDisplayStyle.Image;
 			_ToolStripButtonOpen.Name = "_ToolStripButtonOpen";
 			_ToolStripButtonOpen.Click += _ToolStripButtonOpen_Click;
 			// 
 			// _ToolStripButtonSave
 			// 
-			_ToolStripButtonSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
 			resources.ApplyResources(_ToolStripButtonSave, "_ToolStripButtonSave");
+			_ToolStripButtonSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
 			_ToolStripButtonSave.Name = "_ToolStripButtonSave";
 			_ToolStripButtonSave.Click += _ToolStripButtonSave_Click;
 			// 
@@ -130,27 +129,27 @@ namespace salkodev.hiddendata
 			// 
 			// _ContextMenuStrip
 			// 
-			_ContextMenuStrip.Items.AddRange(new ToolStripItem[] { _MenuItemAddFiles, _MenuItemOpen, _MenuItemSaveAs, _MenuItemSaveAllFiles });
-			_ContextMenuStrip.Name = "_ContextMenuStrip";
 			resources.ApplyResources(_ContextMenuStrip, "_ContextMenuStrip");
+			_ContextMenuStrip.Items.AddRange(new ToolStripItem[] { _MenuItemAddFiles, _MenuItemOpen, _MenuItemSaveAs });
+			_ContextMenuStrip.Name = "_ContextMenuStrip";
 			// 
 			// _MenuItemAddFiles
 			// 
-			_MenuItemAddFiles.Name = "_MenuItemAddFiles";
 			resources.ApplyResources(_MenuItemAddFiles, "_MenuItemAddFiles");
+			_MenuItemAddFiles.Name = "_MenuItemAddFiles";
 			_MenuItemAddFiles.Click += _MenuItemAddFiles_Click;
+			// 
+			// _MenuItemOpen
+			// 
+			resources.ApplyResources(_MenuItemOpen, "_MenuItemOpen");
+			_MenuItemOpen.Name = "_MenuItemOpen";
+			_MenuItemOpen.Click += _MenuItemOpen_Click;
 			// 
 			// _MenuItemSaveAs
 			// 
-			_MenuItemSaveAs.Name = "_MenuItemSaveAs";
 			resources.ApplyResources(_MenuItemSaveAs, "_MenuItemSaveAs");
+			_MenuItemSaveAs.Name = "_MenuItemSaveAs";
 			_MenuItemSaveAs.Click += _MenuItemSaveAs_Click;
-			// 
-			// _MenuItemSaveAllFiles
-			// 
-			_MenuItemSaveAllFiles.Name = "_MenuItemSaveAllFiles";
-			resources.ApplyResources(_MenuItemSaveAllFiles, "_MenuItemSaveAllFiles");
-			_MenuItemSaveAllFiles.Click += _MenuItemSaveAllFiles_Click;
 			// 
 			// _lmageListFileIcons
 			// 
@@ -174,11 +173,9 @@ namespace salkodev.hiddendata
 			_LinkLabelOpenImageFile.TabStop = true;
 			_LinkLabelOpenImageFile.LinkClicked += _LinkLabelOpenImageFile_LinkClicked;
 			// 
-			// _MenuItemOpen
+			// _SaveFileDialog
 			// 
-			_MenuItemOpen.Name = "_MenuItemOpen";
-			resources.ApplyResources(_MenuItemOpen, "_MenuItemOpen");
-			_MenuItemOpen.Click += _MenuItemOpen_Click;
+			resources.ApplyResources(_SaveFileDialog, "_SaveFileDialog");
 			// 
 			// FormMain
 			// 
@@ -219,7 +216,6 @@ namespace salkodev.hiddendata
 		private Label _LabelNoFilesInsideFound;
 		private ContextMenuStrip _ContextMenuStrip;
 		private ToolStripMenuItem _MenuItemAddFiles;
-		private ToolStripMenuItem _MenuItemSaveAllFiles;
 		private ColumnHeader _ColumnHeaderFileName;
 		private LinkLabel _LinkLabelOpenImageFile;
 		private ImageList _lmageListFileIcons;

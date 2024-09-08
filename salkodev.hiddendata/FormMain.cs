@@ -170,20 +170,8 @@ namespace salkodev.hiddendata
 			{
 				MessageBox.Show(this, ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
-
 		}
 
-		void _MenuItemSaveAllFiles_Click(object sender, EventArgs e)
-		{
-			if (_Manager.State == DataState.Unspecified)
-			{
-				MessageBox.Show(this, Properties.Resources.OpenWorkImageFileFirst, Properties.Resources.OpenSourceImageFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-				return;
-			}
-
-			//....TODO@: impl
-			MessageBox.Show(this, "Not Implemented", "Not Implemented", MessageBoxButtons.OK, MessageBoxIcon.Error);
-		}
 
 		void _UpdateFilesList()
 		{
