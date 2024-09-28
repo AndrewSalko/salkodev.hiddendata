@@ -25,6 +25,15 @@ namespace salkodev.hiddendata.Data
 		}
 
 		/// <summary>
+		/// If file encrypted, FileName will be empty and real file name stored here
+		/// </summary>
+		public byte[] FileNameEncrypted
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
 		/// File body (content)
 		/// </summary>
 		public byte[] Body
@@ -32,6 +41,16 @@ namespace salkodev.hiddendata.Data
 			get;
 			set;
 		}
+
+		/// <summary>
+		/// File hash (for integrity control)
+		/// </summary>
+		public byte[] Hash
+		{
+			get;
+			set;
+		}
+
 
 		/// <summary>
 		/// Last write time of file (preserved during save and restore)

@@ -33,6 +33,15 @@ namespace salkodev.hiddendata.Data
 			set;
 		}
 
+		/// <summary>
+		/// If file's body is encrypted or not
+		/// </summary>
+		public bool Encrypted
+		{
+			get;
+			set;
+		}
+
 		static XmlSerializer _Serializer = new XmlSerializer(typeof(Metadata));
 
 		public byte[] Serialize()

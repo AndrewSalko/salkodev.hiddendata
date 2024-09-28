@@ -37,12 +37,40 @@ namespace salkodev.hiddendata
 			set;
 		}
 
+		/// <summary>
+		/// Use password encryption (file names, file content)
+		/// </summary>
+		public bool PasswordEncryption
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// Password (from settings dialog)
+		/// </summary>
+		public string Password
+		{
+			get;
+			set;
+		}
 
 		public Metadata Data
 		{
 			get;
 			set;
 		}
+
+		/// <summary>
+		/// if something changed after load (description, files..., encryption)
+		/// </summary>
+		public bool Dirty
+		{
+			get;
+			set;
+		}
+
+
 
 		public void AddFile(string fileName)
 		{

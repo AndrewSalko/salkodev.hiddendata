@@ -61,11 +61,40 @@ namespace salkodev.hiddendata.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add files.
+        ///   Looks up a localized string similar to Додати файли.
         /// </summary>
         internal static string AddFilesCaption {
             get {
                 return ResourceManager.GetString("AddFilesCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Помилка розшифрування (можливо невірний пароль) {0}.
+        /// </summary>
+        internal static string DecryptErrorWrongPassword {
+            get {
+                return ResourceManager.GetString("DecryptErrorWrongPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Encrypt_Icon_48 {
+            get {
+                object obj = ResourceManager.GetObject("Encrypt_Icon_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_icon_16 {
+            get {
+                object obj = ResourceManager.GetObject("eye-icon-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -80,7 +109,7 @@ namespace salkodev.hiddendata.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open file.
+        ///   Looks up a localized string similar to Відкрити файл.
         /// </summary>
         internal static string OpenFileCaption {
             get {
@@ -89,7 +118,7 @@ namespace salkodev.hiddendata.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open any file (where you want to save hidden data).
+        ///   Looks up a localized string similar to Відкрийте будь-який файл зображення (в якому потрібно зберігати приховані дані).
         /// </summary>
         internal static string OpenImageFileDescr {
             get {
@@ -98,7 +127,7 @@ namespace salkodev.hiddendata.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open source file.
+        ///   Looks up a localized string similar to Відкрити робочий файл зображення.
         /// </summary>
         internal static string OpenSourceImageFileCaption {
             get {
@@ -107,7 +136,7 @@ namespace salkodev.hiddendata.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open work file first.
+        ///   Looks up a localized string similar to Вам необхідно спочатку відкрити робочий файл зображення.
         /// </summary>
         internal static string OpenWorkImageFileFirst {
             get {
@@ -116,7 +145,7 @@ namespace salkodev.hiddendata.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select file.
+        ///   Looks up a localized string similar to Оберіть файл.
         /// </summary>
         internal static string SelectFileCaption {
             get {
@@ -125,7 +154,7 @@ namespace salkodev.hiddendata.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select only one file to open it for viewing.
+        ///   Looks up a localized string similar to Оберіть лише один файл для перегляду.
         /// </summary>
         internal static string SelectOnlyOneFileToOpen {
             get {
@@ -134,7 +163,7 @@ namespace salkodev.hiddendata.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You need to add at least file.
+        ///   Looks up a localized string similar to Вам необхідно додати хоча б один файл.
         /// </summary>
         internal static string YouNeedToAddAtLeastFile {
             get {

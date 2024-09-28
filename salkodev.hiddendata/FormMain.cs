@@ -1,5 +1,7 @@
 using System.Text;
+using System.Text.Unicode;
 using salkodev.hiddendata.Data;
+using salkodev.hiddendata.Properties;
 
 namespace salkodev.hiddendata
 {
@@ -52,6 +54,36 @@ namespace salkodev.hiddendata
 
 				loader.Load(fileName, Data.Marker.META_DATA_BEGIN_MARKER, out Data.Metadata info, out int origFileLength, out byte[] origFileBody);
 
+				//info will be null if we open jpg file without data inside
+				if (info != null)
+				{
+					if (info.Encrypted)
+					{
+						//ask password to decrypt now...
+						string password = null;
+
+						using (var passDlg = new Encryption.PasswordForm())
+						{
+							if (passDlg.ShowDialog() != DialogResult.OK)
+								return;
+
+							password = passDlg.Password;
+						}
+
+						if (!_Decrypt(info, password))
+						{
+							MessageBox.Show(this, string.Format(Resources.DecryptErrorWrongPassword, string.Empty), Resources.OpenFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+							return;
+						}
+
+						//if we successfully decrypt, remember pass in memory (we need it for save later)
+						_Manager.PasswordEncryption = true;
+						_Manager.Password = password;
+					}
+
+					_TextBoxDescription.Text = info.Description;
+				}
+
 				_Manager.State = (info != null) ? DataState.OpenedWithData : DataState.OpenedNoData;
 				_Manager.FileName = fileName;
 				_Manager.Data = info;
@@ -61,13 +93,77 @@ namespace salkodev.hiddendata
 				_UpdateFilesList();
 
 				_UpdateControls();
+
+				_Manager.Dirty = false;
+			}
+			catch (System.Security.Cryptography.CryptographicException crEx)
+			{
+				string complexMsg = string.Format(Resources.DecryptErrorWrongPassword, Environment.NewLine + crEx.Message);
+				MessageBox.Show(this, complexMsg, Resources.OpenFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(this, ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(this, ex.Message, Resources.OpenFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
+		bool _Decrypt(Metadata info, string password)
+		{
+			if (info == null)
+				throw new ArgumentNullException(nameof(info));
+
+			if (!info.Encrypted)
+				throw new ArgumentException("info not encrypted");
+
+			if(string.IsNullOrWhiteSpace(password))
+				throw new ArgumentNullException(nameof(password),"Password can't be empty");
+
+
+			var files= info.Files;
+			if (files == null)
+				throw new ApplicationException("Encryption exists, but Files not found");
+
+			foreach (var f in files)
+			{
+				if (!_DecryptFile(f, password))
+					return false;
+
+			}//foreach
+
+			return true;
+		}
+
+		bool _DecryptFile(MetadataFile file, string password)
+		{
+			if (file == null)
+				throw new ArgumentNullException(nameof(file));
+
+			if (file.Hash == null || file.Hash.Length == 0)
+				throw new ArgumentNullException(nameof(file), "file.Hash empty");
+
+			//first try decrypt body, and check hash.
+			if (file.Body == null || file.Body.Length == 0)
+				throw new ApplicationException("file.Body null or empty");
+
+			var manager = new Encryption.Manager();
+			var passHash = manager.GetHash(password);
+
+			byte[] bodyDecrypted = manager.DecryptData(file.Body, passHash);
+			byte[] bodyDecryptedHash = manager.GetHash(bodyDecrypted);
+
+			//now check Hash - it must be equals (or decryption not successful)
+			if (!manager.HashEquals(file.Hash, bodyDecryptedHash))
+				return false;
+
+			byte[] fnameBin = manager.DecryptData(file.FileNameEncrypted, passHash);
+			string fileNameReal = Encoding.UTF8.GetString(fnameBin);
+
+			file.Body = bodyDecrypted;
+			file.FileName = fileNameReal;
+
+			return true;
+
+		}//_DecryptFile
 
 		void _ToolStripButtonSave_Click(object sender, EventArgs e)
 		{
@@ -97,14 +193,48 @@ namespace salkodev.hiddendata
 					return;
 				}
 
-				byte[] data = _Manager.Data.Serialize();
+				var dataToSave = new Metadata();
+				dataToSave.Files = _Manager.Data.Files; //if not encrypted, use original files
+				dataToSave.Description = _TextBoxDescription.Text;
+
+				if (_Manager.PasswordEncryption && !string.IsNullOrWhiteSpace(_Manager.Password))
+				{
+					dataToSave.Encrypted = true;
+
+					var encManager = new Encryption.Manager();
+					var passwordHash = encManager.GetHash(_Manager.Password);
+
+					//encrypt file names and file content
+					List<MetadataFile> filesEncrypted = new List<MetadataFile>();
+
+					foreach (var file in files)
+					{
+						var fileBodyHash = encManager.GetHash(file.Body);
+
+						var fileNameBin = Encoding.UTF8.GetBytes(file.FileName);
+						var fileNameEncrypted = encManager.EncryptData(fileNameBin, passwordHash);
+						var fileBodyEncrypted = encManager.EncryptData(file.Body, passwordHash);
+
+						var fileEnc = new MetadataFile();
+						fileEnc.FileName = null; //normal file name not saved if file encrypted
+						fileEnc.FileNameEncrypted = fileNameEncrypted;
+						fileEnc.LastWriteTime = file.LastWriteTime;
+						fileEnc.Body = fileBodyEncrypted;
+						fileEnc.Hash = fileBodyHash;
+
+						filesEncrypted.Add(fileEnc);
+					}
+
+					dataToSave.Files = filesEncrypted.ToArray();
+				}
 
 				//...test save to xml
+				//byte[] data = dataToSave.Serialize();
 				//string destFile = Path.Combine(Application.StartupPath, "result.xml");
 				//File.WriteAllBytes(destFile, data);
 
 				var saver = new DataSaver();
-				saver.Save(_Manager.FileName, _Manager.FileNameBody, Data.Marker.META_DATA_BEGIN_MARKER, _Manager.Data);
+				saver.Save(_Manager.FileName, _Manager.FileNameBody, Data.Marker.META_DATA_BEGIN_MARKER, dataToSave);
 			}
 			catch (Exception ex)
 			{
@@ -185,6 +315,9 @@ namespace salkodev.hiddendata
 			foreach (ListViewItem item in _ListViewFilesInside.Items)
 			{
 				var mtFile = (MetadataFile)item.Tag;
+				if (mtFile == null)
+					throw new ApplicationException("mtFile == null");
+
 				inList[mtFile.FileName] = null;
 			}
 
@@ -216,6 +349,8 @@ namespace salkodev.hiddendata
 			foreach (ListViewItem li in _ListViewFilesInside.SelectedItems)
 			{
 				var metaFile = (MetadataFile)li.Tag;
+				if (metaFile == null)
+					throw new NullReferenceException("metaFile == null");
 
 				if (destFolder == null)
 				{
@@ -253,6 +388,9 @@ namespace salkodev.hiddendata
 			{
 				var li = _ListViewFilesInside.SelectedItems[0];
 				var metaFile = (MetadataFile)li.Tag;
+				if (metaFile == null)
+					throw new NullReferenceException("metaFile == null");
+
 				byte[] body = metaFile.Body;
 
 				//decode (we support UTF-8 for now)
@@ -276,6 +414,32 @@ namespace salkodev.hiddendata
 			{
 				MessageBox.Show(this, ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
+		}
+
+		void _ToolStripButtonEncryption_Click(object sender, EventArgs e)
+		{
+			//Ask use for password-encryption option (real encryption will be during save process)
+
+			using (var dlg = new Encryption.EncryptForm())
+			{
+				dlg.Password = _Manager.Password;
+				dlg.PasswordUse = !string.IsNullOrWhiteSpace(_Manager.Password);
+
+				var askRes = dlg.ShowDialog(this);
+				if (askRes != DialogResult.OK)
+					return;
+
+				_Manager.PasswordEncryption = dlg.PasswordUse;
+				_Manager.Password = dlg.Password;
+
+				if (string.IsNullOrWhiteSpace(_Manager.Password))
+					_Manager.PasswordEncryption = false;
+			}
+		}
+
+		void _TextBoxDescription_TextChanged(object sender, EventArgs e)
+		{
+			_Manager.Dirty = true;
 		}
 	}
 }
