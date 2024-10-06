@@ -5,3 +5,4 @@ packages
 *.pdb
 *.pch
 *.csproj.user
+*.pubxml.user
