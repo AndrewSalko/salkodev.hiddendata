@@ -29,6 +29,18 @@ namespace salkodev.hiddendata.Encryption
 			}
 		}
 
+		public string PasswordHint
+		{
+			get
+			{
+				return _TextBoxHint.Text;
+			}
+			set
+			{
+				_TextBoxHint.Text = value;
+			}
+		}
+
 
 		void PasswordForm_Load(object sender, EventArgs e)
 		{

@@ -36,6 +36,7 @@
 			_LabelDescr = new Label();
 			_LabelMain = new Label();
 			_PictureBoxEncryption = new PictureBox();
+			_TextBoxHint = new TextBox();
 			((System.ComponentModel.ISupportInitialize)_PictureBoxEncryption).BeginInit();
 			SuspendLayout();
 			// 
@@ -84,12 +85,19 @@
 			_PictureBoxEncryption.Name = "_PictureBoxEncryption";
 			_PictureBoxEncryption.TabStop = false;
 			// 
+			// _TextBoxHint
+			// 
+			resources.ApplyResources(_TextBoxHint, "_TextBoxHint");
+			_TextBoxHint.Name = "_TextBoxHint";
+			_TextBoxHint.ReadOnly = true;
+			// 
 			// PasswordForm
 			// 
 			AcceptButton = _ButtonOK;
 			resources.ApplyResources(this, "$this");
 			AutoScaleMode = AutoScaleMode.Font;
 			CancelButton = _ButtonCancel;
+			Controls.Add(_TextBoxHint);
 			Controls.Add(_ButtonShowPass);
 			Controls.Add(_TextBoxPass);
 			Controls.Add(_LabelDescr);
@@ -116,5 +124,6 @@
 		private Label _LabelDescr;
 		private Label _LabelMain;
 		private PictureBox _PictureBoxEncryption;
+		private TextBox _TextBoxHint;
 	}
 }

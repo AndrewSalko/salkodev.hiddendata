@@ -140,6 +140,7 @@ namespace salkodev.hiddendata
 			_ContextMenuStrip.Items.AddRange(new ToolStripItem[] { _MenuItemAddFiles, _MenuItemOpen, _MenuItemSaveAs });
 			_ContextMenuStrip.Name = "_ContextMenuStrip";
 			resources.ApplyResources(_ContextMenuStrip, "_ContextMenuStrip");
+			_ContextMenuStrip.Opening += _ContextMenuStrip_Opening;
 			// 
 			// _MenuItemAddFiles
 			// 

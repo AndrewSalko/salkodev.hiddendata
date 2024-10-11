@@ -1,3 +1,4 @@
+using System.Drawing.Imaging;
 using System.Text;
 using System.Text.Unicode;
 using salkodev.hiddendata.Data;
@@ -64,6 +65,8 @@ namespace salkodev.hiddendata
 
 						using (var passDlg = new Encryption.PasswordForm())
 						{
+							passDlg.PasswordHint = info.Description;
+
 							if (passDlg.ShowDialog() != DialogResult.OK)
 								return;
 
@@ -115,11 +118,11 @@ namespace salkodev.hiddendata
 			if (!info.Encrypted)
 				throw new ArgumentException("info not encrypted");
 
-			if(string.IsNullOrWhiteSpace(password))
-				throw new ArgumentNullException(nameof(password),"Password can't be empty");
+			if (string.IsNullOrWhiteSpace(password))
+				throw new ArgumentNullException(nameof(password), "Password can't be empty");
 
 
-			var files= info.Files;
+			var files = info.Files;
 			if (files == null)
 				throw new ApplicationException("Encryption exists, but Files not found");
 
@@ -373,23 +376,54 @@ namespace salkodev.hiddendata
 
 		}//_MenuItemSaveAs_Click
 
-		void _MenuItemOpen_Click(object sender, EventArgs e)
+		const string _TXT_EXT = ".txt";
+
+		bool _TryGetSelectedFile(out MetadataFile fileInfo, out string message)
 		{
+			message = null;
+			fileInfo = null;
+
 			if (_ListViewFilesInside.SelectedItems.Count == 0)
-				return;
+				return false;
 
 			if (_ListViewFilesInside.SelectedItems.Count > 1)
 			{
-				MessageBox.Show(this, Properties.Resources.SelectOnlyOneFileToOpen, Properties.Resources.SelectFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-				return;
+				message = Properties.Resources.SelectOnlyOneFileToOpen;
+				return false;
 			}
 
+			var li = _ListViewFilesInside.SelectedItems[0];
+			var metaFile = (MetadataFile)li.Tag;
+			if (metaFile == null)
+			{
+				message = "metaFile == null";
+				return false;
+			}
+
+			fileInfo = metaFile;
+			return true;
+		}
+
+		void _MenuItemOpen_Click(object sender, EventArgs e)
+		{
 			try
 			{
-				var li = _ListViewFilesInside.SelectedItems[0];
-				var metaFile = (MetadataFile)li.Tag;
-				if (metaFile == null)
-					throw new NullReferenceException("metaFile == null");
+				if (!_TryGetSelectedFile(out MetadataFile metaFile, out string selectionMsg))
+				{
+					if(!string.IsNullOrEmpty(selectionMsg))
+					{
+						MessageBox.Show(this, selectionMsg, Properties.Resources.OpenFileCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+					}
+					
+					return;
+				}
+
+				var ext = Path.GetExtension(metaFile.FileName);
+				if (string.Compare(ext, _TXT_EXT, true) != 0)
+				{
+					return;
+				}
+
 
 				byte[] body = metaFile.Body;
 
@@ -440,6 +474,25 @@ namespace salkodev.hiddendata
 		void _TextBoxDescription_TextChanged(object sender, EventArgs e)
 		{
 			_Manager.Dirty = true;
+		}
+
+		void _ContextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+		{
+			_MenuItemOpen.Visible = false;
+
+			if (!_TryGetSelectedFile(out MetadataFile metaFile, out string selectionMsg))
+			{
+				return;
+			}
+
+			//we allow open only .txt files
+			var ext = Path.GetExtension(metaFile.FileName);
+			if (string.Compare(ext, _TXT_EXT, true) != 0)
+			{
+				return;
+			}
+
+			_MenuItemOpen.Visible = true;
 		}
 	}
 }
